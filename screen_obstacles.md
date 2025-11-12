@@ -11,3 +11,9 @@ The "screen" buffer/clipboard isn't reachable with Ctrl-Shift-v in your byobu se
 In your console/ssh session with byobu you can copy/paste from the system clipboard with Ctrl-Shift-c/Ctrl-Shift-v in any browser.
 In Google Chrome you can even use your mouse! Pasting clipboard text with the right mouse button works there also!
 
+If you prefer any other keybinding in "screen" command mode you will need to edit (create the file if it doesn't exist) .screenrc in your .byobu folder:
+~~~
+$ cat .byobu/.screenrc
+unbind ]
+bind C-v paste
+~~~
