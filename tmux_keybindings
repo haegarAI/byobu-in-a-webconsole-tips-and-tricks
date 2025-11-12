@@ -25,7 +25,7 @@ set -g prefix ^A                                                                
 set -g prefix2 F12                                                                                                                     │
 ~~~
 "screen" command mode is usually/per default activated with Ctrl-a and then comes some command...
-tmux has already bound Ctrl-a to some seldom needed funcion and therefore it first unbinds the key
+tmux has already bound Ctrl-a to some seldom needed function and therefore it first unbinds the key
 and then sets 2 global prefixes in order to keep the "screen" default key Ctrl-a for activating the command mode, but also F12 , where only one key needs to be pressed :) 
 
 
