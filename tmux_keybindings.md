@@ -1,1 +1,33 @@
+As I had problems creating a new vertical pane in my byobu session with Ctrl-F2 I needed to change this setting to another keybinding.
+
+So therefore I changed/edited the file ".byobu/keybindings.tmux"
+~~~
+$  cat .byobu/keybindings.tmux
+bind-key -n C-O display-panes \; split-window -h -c "#{pane_current_path}"
+bind-key -n C-B display-panes \; split-window -v -c "#{pane_current_path}"
+...
+~~~
+here you can see that I mapped C-O = Ctrl-o (german keyboard Strg-o) to create horizontal pane
+and C-B = Ctrl-b (german keyboard Strg-b) to create vertical pane
+
+The syntax in tmux is slightly different than in screenrc, where they use lower and uppercase letters,
+whereas in tmux they always add an S to have an uppercase letters: like C-S-B = Ctrl-Shift-b
+
+SO in this tmux config file you can also see the screen activation key definition:
+~~~
+$ cat .byobu/keybindings.tmux                                                                                  
+bind-key -n C-O display-panes \; split-window -h -c "#{pane_current_path}"                                                             
+bind-key -n C-B display-panes \; split-window -v -c "#{pane_current_path}"                                                             
+bind C-y run "tmux save-buffer - | xclip -i"                                                                                           
+                                                                                                                                       
+unbind-key -n C-a                                                                                                                      
+set -g prefix ^A                                                                                                                       
+set -g prefix2 F12                                                                                                                     
+~~~
+"screen" command mode is usually/per default activated with Ctrl-a and then comes some command...
+tmux has already bound Ctrl-a to some seldom needed function and therefore it first unbinds the key
+and then sets 2 global prefixes in order to keep the "screen" default key Ctrl-a for activating the command mode, but also F12 , where only one key needs to be pressed :) 
+
+
+
 
