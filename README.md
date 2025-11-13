@@ -1,5 +1,4 @@
-# byobu-in-a-webconsole-tips-and-tricks
-byobu in a webconsole tips and tricks
+# byobu in a webconsole tips and tricks
 
 Working remotly via Citrix on a Windows Desktop in german and then in a browser like Google Chrome in a ssh console session with a germann keyboard can bring a lot of troubles with the keymappings...
 
